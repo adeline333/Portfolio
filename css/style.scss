@@ -303,13 +303,13 @@ a:focus {
   .carousel-control-prev {
     background-image: url(../images/prev.png);
     background-color: $white;
-    transform: translate(-85px, 30px);
+   /* transform: translate(-85px, 30px);*/
   }
 
   .carousel-control-next {
     background-image: url(../images/next.png);
     background-color: $primary1;
-    transform: translate(-45px, 0);
+    /*transform: translate(-45px, 0);*/
   }
 }
 
@@ -338,7 +338,7 @@ a:focus {
       box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: .15);
       border-top: 15px solid transparent;
       overflow: hidden;
-      transition: all .1s;
+     
 
       .img-box {
         display: flex;
