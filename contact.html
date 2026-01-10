@@ -8,11 +8,11 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="keywords" content="Contact, Software Developer, Adeline Tuyizere, Kigali Rwanda" />
+  <meta name="description" content="Get in touch with Adeline Tuyizere - Software Developer based in Kigali, Rwanda. Available for software development projects and collaborations." />
+  <meta name="author" content="Adeline Tuyizere" />
 
-  <title>ADELE</title>
+  <title>Contact - Adeline Tuyizere | Software Developer</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -38,7 +38,7 @@
           <a class="navbar-brand" href="index.html">
             <i class="fas fa-code"></i>
             <span>
-             Tuyizere Adeline
+             Adeline Tuyizere
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,32 +81,32 @@
         <h2>
           Contact Me
         </h2>
-        <p class="section-subtitle">Let's work together! Get in touch with me</p>
+        <p class="section-subtitle">Let's collaborate on your next software project! Get in touch with me</p>
       </div>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-md-8">
           <div class="contact-form-container">
-            <form action="" class="contact-form">
+            <form action="contact-handler.php" method="POST" class="contact-form" id="contactForm">
               <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
+                <input type="text" name="name" placeholder="Your Name" required />
                 <i class="fas fa-user"></i>
               </div>
               <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
+                <input type="email" name="email" placeholder="Your Email" required />
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="form-group">
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" name="phone" placeholder="Phone Number" />
                 <i class="fas fa-phone"></i>
               </div>
               <div class="form-group">
-                <input type="text" placeholder="Subject" />
+                <input type="text" name="subject" placeholder="Subject" required />
                 <i class="fas fa-tag"></i>
               </div>
               <div class="form-group">
-                <textarea class="message-box" placeholder="Your Message" rows="5"></textarea>
+                <textarea class="message-box" name="message" placeholder="Your Message" rows="5" required></textarea>
                 <i class="fas fa-comment"></i>
               </div>
               <div class="form-group">
@@ -115,6 +115,7 @@
                   Send Message
                 </button>
               </div>
+              <div id="form-messages"></div>
             </form>
           </div>
         </div>
@@ -126,7 +127,7 @@
               </div>
               <div class="contact-details">
                 <h4>Location</h4>
-                <p>Gikondo, Kigali, Rwanda</p>
+                <p>Kigali, Rwanda</p>
               </div>
             </div>
             <div class="contact-item">
@@ -153,7 +154,7 @@
               </div>
               <div class="contact-details">
                 <h4>Available</h4>
-                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM (EAT)</p>
               </div>
             </div>
        
@@ -236,7 +237,7 @@
       <div class="row">
         <div class="col-lg-7 col-md-9 mx-auto">
           <p>
-            &copy; 2024 All Rights Reserved @ Tuyizere Adeline
+            &copy; 2025 All Rights Reserved @ Adeline Tuyizere | Software Developer
           </p>
         </div>
       </div>
@@ -246,6 +247,37 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        var form = $(this);
+        var formMessages = $('#form-messages');
+        var submitBtn = form.find('.submit-btn');
+        
+        // Disable submit button and show loading
+        submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Sending...');
+        
+        $.ajax({
+          type: 'POST',
+          url: form.attr('action'),
+          data: form.serialize(),
+          success: function(data) {
+            formMessages.removeClass('error').addClass('success').text(data);
+            form[0].reset();
+          },
+          error: function(data) {
+            formMessages.removeClass('success').addClass('error').text('Oops! An error occurred and your message could not be sent.');
+          },
+          complete: function() {
+            submitBtn.prop('disabled', false).html('<i class="fas fa-paper-plane"></i> Send Message');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
