@@ -1,125 +1,346 @@
-<!DOCTYPE html> 
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="Software Developer, Full-Stack Development, React, TypeScript, Java Spring Boot, Web Development, API Integration" />
-  <meta name="description" content="Portfolio of Adeline Tuyizere, an aspiring software developer with experience in full-stack development, building scalable web applications, and API integration." />
+  <meta name="keywords" content="Software Engineer, Full-Stack Development, React, TypeScript, Java Spring Boot, Web Development, API Integration" />
+  <meta name="description" content="Portfolio of Adeline Tuyizere, a detail-oriented software engineer with experience in full-stack development using React, TypeScript, NestJS, and Spring Boot." />
   <meta name="author" content="Adeline Tuyizere" />
 
-  <title>Adeline Tuyizere - Software Developer Portfolio</title>
+  <title>Adeline Tuyizere - Software Engineer</title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
+  
+  <!-- Core Layout and Styling -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- Header / Navigation -->
+  <header class="header_section">
+    <div class="container custom_nav-container">
+      <a class="navbar-brand" href="#home" class="nav-scroll">
+        <i class="fas fa-code"></i><span>Adeline Tuyizere</span>
+      </a>
+      
+      <!-- Mobile Toggle -->
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  <div class="hero_area">
-    <!-- header section starts -->
-    <header class="header_section">
+      <nav class="nav-menu" id="primary-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link nav-scroll" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-scroll" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-scroll" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link nav-scroll" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link nav-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero_area">
       <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <i class="fas fa-code"></i>
-            <span>
-              Adeline Tuyizere
-            </span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="s-1"> </span>
-            <span class="s-2"> </span>
-            <span class="s-3"> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="skills.html">Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-
-    <!-- slider section -->
-    <section class="slider_section">
-      <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-md-6">
-            <div class="detail_box">
+            <div class="detail_box fade-element">
               <h1>
-                Full-Stack Developer <br>
+                Software Engineer <br>
                 Building Scalable <br>
                 Web Applications
               </h1>
               <p>
-                Welcome to my portfolio! I am Adeline Tuyizere, an aspiring software developer with hands-on experience in full-stack development and building web applications. Currently pursuing my Bachelor's in Information Technology (Software Engineering) at AUCA.
+                Hi, I'm Adeline Tuyizere. I'm a software engineer with hands-on experience in full-stack development using React, TypeScript, NestJS, and Spring Boot. I specialize in building functional web applications focusing on backend logic, API integration, and database management.
               </p>
-              <div class="hero-stats">
+              <div class="hero-stats mt-4">
                 <div class="stat-item">
                   <span class="stat-number">1+</span>
                   <span class="stat-label">Year Experience</span>
                 </div>
                 <div class="stat-item">
                   <span class="stat-number">5+</span>
-                  <span class="stat-label">Projects Completed</span>
+                  <span class="stat-label">Projects</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">5+</span>
+                  <span class="stat-number">10+</span>
                   <span class="stat-label">Technologies</span>
                 </div>
               </div>
-              <div class="hero-buttons">
-                <a href="contact.html" class="btn-primary">
-                  <i class="fas fa-envelope"></i>
-                  Get in Touch
-                </a>
-                <a href="projects.html" class="btn-secondary">
+              <div class="hero-buttons mt-4">
+                <a href="#projects" class="btn-primary nav-scroll">
                   <i class="fas fa-folder-open"></i>
                   View Projects
+                </a>
+                <a href="#contact" class="btn-secondary nav-scroll">
+                  <i class="fas fa-envelope"></i>
+                  Contact Me
                 </a>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 col-md-6 offset-lg-1">
-            <div class="img_content">
-              <div class="img_container">
-                <div class="static_img_box">
-                  <img src="images/adelee.jpeg" alt="Adeline Tuyizere - Software Developer">
+          <div class="col-lg-5 col-md-6 offset-lg-1 mt-5 mt-md-0">
+            <div class="img_container fade-element delay-1">
+              <img src="images/adelee.jpeg" alt="Adeline Tuyizere - Software Engineer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="layout_padding alternate-bg">
+      <div class="container">
+        <div class="heading_container">
+          <h2>About Me</h2>
+          <p class="section-subtitle">Dedicated software engineer focused on collaborative and impactful engineering roles.</p>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Professional Summary -->
+            <div class="about-item fade-element">
+              <i class="fas fa-user-tie"></i>
+              <div>
+                <h4>Professional Summary</h4>
+                <p>A software engineer with hands-on experience in full-stack development using React, TypeScript, NestJS, and Spring Boot. Contributed to Agile teams building functional web applications with a focus on backend logic, API integration, and database management. Eager to apply and grow these skills in a collaborative engineering role.</p>
+              </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="about-item fade-element transition-delay">
+              <i class="fas fa-briefcase"></i>
+              <div class="w-100">
+                <h4>Professional Experience</h4>
+                
+                <div class="timeline mt-4">
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <h5>Trainee</h5>
+                      <span class="timeline-date">11/2024 – Present</span>
+                    </div>
+                    <span class="timeline-company">The Gym – Rwanda’s most intense software development trainee program | Kigali, Rwanda</span>
+                    <ul class="timeline-desc mt-2">
+                      <li>Completed an intensive foundation in modern software engineering, mastering Git workflows, clean code principles, Agile methodologies, and full-stack fundamentals with JavaScript/TypeScript.</li>
+                      <li>Applied skills in a major project phase, developing features for a full-stack car-sharing platform. Built RESTful APIs with NestJS for booking logic and engineered responsive UIs with React, integrating them with PostgreSQL databases.</li>
+                      <li>Contributed to a collaborative Agile team by participating in sprint planning, peer code reviews, and maintaining code quality through structured Git practices.</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline-item mt-4">
+                    <div class="timeline-header">
+                      <h5>Academic Support Assistant</h5>
+                      <span class="timeline-date">02/2022 – 05/2022</span>
+                    </div>
+                    <span class="timeline-company">NETLA Learning Hub | Kigali, Rwanda</span>
+                    <ul class="timeline-desc mt-2">
+                      <li>Led structured practice sessions and one-on-one coaching, analyzing mock tests to provide personalized feedback on exam strategy, time management, and areas for improvement.</li>
+                      <li>Assisted students in mastering test formats and building exam confidence through hands-on exercises and collaborative review workshops.</li>
+                      <li>Facilitated TOEFL and IELTS preparation by selecting and applying the most effective existing study materials, practice questions, and vocabulary lists.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="about-item fade-element">
+              <i class="fas fa-graduation-cap"></i>
+              <div class="w-100">
+                <h4>Education & Training</h4>
+                <div class="timeline mt-4">
+                  <div class="timeline-item">
+                    <div class="timeline-header">
+                      <h5>BSc Information Technology (Software Engineering)</h5>
+                      <span class="timeline-date">03/2023 – 11/2026</span>
+                    </div>
+                    <span class="timeline-company">Adventist University of Central Africa (AUCA) | Kigali, Rwanda</span>
+                    <p class="mt-2 text-muted"><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Database Systems, Web Technologies</p>
+                  </div>
+                  
+                  <div class="timeline-item mt-4">
+                    <div class="timeline-header">
+                      <h5>Africa to Silicon Valley (A2SV)</h5>
+                      <span class="timeline-date">12/2025 – Present</span>
+                    </div>
+                    <p class="mt-2 text-muted">Software engineering program focused on advanced Data Structures & Algorithms using Python, problem-solving, and real-world project collaboration.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Technical Skills</h2>
+          <p class="section-subtitle">A comprehensive breakdown of my technology stack</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category fade-element">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+              <span class="skill-tag"><i class="fab fa-js-square"></i> TypeScript</span>
+              <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+            </div>
+          </div>
+
+          <!-- Frontend Engineering -->
+          <div class="skill-category fade-element delay-1">
+            <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+              <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+              <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+              <span class="skill-tag"><i class="fas fa-wind"></i> Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Backend Engineering -->
+          <div class="skill-category fade-element">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+              <span class="skill-tag"><i class="fab fa-node-js"></i> NestJS</span>
+              <span class="skill-tag"><i class="fab fa-node-js"></i> Express.js</span>
+              <span class="skill-tag"><i class="fas fa-plug"></i> RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- Databases & Tools -->
+          <div class="skill-category fade-element delay-1">
+            <h3><i class="fas fa-tools"></i> Databases & Tools</h3>
+            <div class="skills-tags">
+              <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+              <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+              <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+              <span class="skill-tag"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+              <span class="skill-tag"><i class="fab fa-docker"></i> Docker (Basic)</span>
+              <span class="skill-tag"><i class="fas fa-terminal"></i> Linux CLI</span>
+              <span class="skill-tag"><i class="fas fa-vial"></i> Postman & Swagger</span>
+              <span class="skill-tag"><i class="fas fa-sync-alt"></i> Agile/Scrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="layout_padding alternate-bg">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Featured Projects</h2>
+          <p class="section-subtitle">Explore my latest work in full-stack development</p>
+        </div>
+        
+        <div class="row">
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4 mb-4 fade-element">
+            <div class="project-card">
+              <div class="project-icon"><i class="fas fa-industry"></i></div>
+              <div class="project-content">
+                <h5>Mining Production Monitoring System</h5>
+                <p>Developed a React-based dashboard for mining operations visualizing key production metrics. Implemented role-based access control and dynamic reporting to streamline workflows.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                </div>
+                <div class="project-links mt-auto">
+                  <a href="https://github.com/adeline333/Mining_production_monitoring_system" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://miningproductionmonitoring.netlify.app/" target="_blank" class="ml-3"><i class="fas fa-external-link-alt"></i> Live</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4 mb-4 fade-element delay-1">
+            <div class="project-card">
+              <div class="project-icon"><i class="fas fa-utensils"></i></div>
+              <div class="project-content">
+                <h5>Food Ordering Management System</h5>
+                <p>Built a full-stack application for restaurants with menu browsing, cart management, and order processing. Implemented user authentication and role-based interfaces.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                </div>
+                <div class="project-links mt-auto">
+                  <a href="https://github.com/adeline333/FoodOrderingManagementSystem_26252" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4 mb-4 fade-element delay-2">
+            <div class="project-card">
+              <div class="project-icon"><i class="fas fa-car"></i></div>
+              <div class="project-content">
+                <h5>Peer-to-Peer Car Sharing</h5>
+                <p>A comprehensive platform where users can lend and borrow cars. Developed features for booking logic utilizing full-stack skills engineered during The Gym training.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">NestJS</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                </div>
+                <div class="project-links mt-auto">
+                  <a href="https://github.com/TheGymRwanda/c7-auca-sienna-carsharing-frontend" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4 mb-4 fade-element">
+            <div class="project-card">
+              <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="project-content">
+                <h5>TVET Linkage Platform</h5>
+                <p>Built during the Code2Unlock Hackathon to improve TVET awareness and private sector engagement. Clean UI/UX implementation.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                </div>
+                <div class="project-links mt-auto">
+                  <a href="https://github.com/adeline333/TVETLink2" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 5 -->
+          <div class="col-md-6 col-lg-4 mb-4 fade-element delay-1">
+            <div class="project-card">
+              <div class="project-icon"><i class="fas fa-globe"></i></div>
+              <div class="project-content">
+                <h5>Professional Portfolio</h5>
+                <p>This modern, responsive single-page portfolio application built using vanilla HTML, elegant CSS styling, and zero bloated frameworks.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links mt-auto">
+                  <a href="https://github.com/adeline333/Portfolio" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://adeline333.github.io/Portfolio/" target="_blank" class="ml-3"><i class="fas fa-external-link-alt"></i> Live</a>
                 </div>
               </div>
             </div>
@@ -127,73 +348,97 @@
         </div>
       </div>
     </section>
-    <!-- end slider section -->
-  </div>
 
-  <!-- info section -->
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="info_contact">
-        <div class="row">
-          <div class="col-md-4">
-            <a href="https://maps.google.com/?q=Kigali,Rwanda" target="_blank">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Kigali, Rwanda</span>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="tel:+250787510679">
-              <i class="fas fa-phone"></i>
-              <span>Call : +250787510679</span>
-            </a>
-          </div>
-          <div class="col-md-4">
-            <a href="mailto:adelinetuyizere333@gmail.com">
-              <i class="fas fa-envelope"></i>
-              <span>adelinetuyizere333@gmail.com</span>
-            </a>
-          </div>
+    <!-- Contact Section -->
+    <section id="contact" class="layout_padding">
+      <div class="container">
+        <div class="heading_container mb-5">
+          <h2>Contact Me</h2>
+          <p class="section-subtitle">Let's collaborate on your next software engineering project!</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 col-lg-9">
-          <div class="info_form">
-            <form action="#">
-              <input type="text" placeholder="Enter your email">
-              <button>Follow</button>
+        
+        <div class="row">
+          <div class="col-lg-7 mb-5 mb-lg-0 fade-element">
+            <!-- Formspree Integration -->
+            <form action="https://formspree.io/f/adelinetuyizere333@gmail.com" method="POST" class="contact-form" id="contactForm">
+              <div class="row">
+                <div class="col-md-6 form-group mb-4">
+                  <input type="text" name="name" class="form-control premium-input" placeholder="Your Name" required />
+                </div>
+                <div class="col-md-6 form-group mb-4">
+                  <input type="email" name="_replyto" class="form-control premium-input" placeholder="Your Email" required />
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <input type="text" name="subject" class="form-control premium-input" placeholder="Subject" required />
+              </div>
+              <div class="form-group mb-4">
+                <textarea name="message" class="form-control premium-input" placeholder="Write your message here" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-100 justify-content-center border-0">
+                <i class="fas fa-paper-plane mr-2"></i> Send Message
+              </button>
             </form>
           </div>
-        </div>
-        <div class="col-md-4 col-lg-3">
-          <div class="info_social">
-            <a href="https://www.linkedin.com/in/adeline-tuyizere-315b22294/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/adeline333" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/adeline_t3/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          
+          <div class="col-lg-4 offset-lg-1 fade-element delay-1">
+            <div class="contact-info-card">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-details">
+                  <h4>Location</h4>
+                  <p>Kigali, Rwanda</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p><a href="mailto:adelinetuyizere333@gmail.com" class="text-white text-decoration-none">adelinetuyizere333@gmail.com</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-details">
+                  <h4>Phone</h4>
+                  <p><a href="tel:+250787510679" class="text-white text-decoration-none">+250 787 510 679</a></p>
+                </div>
+              </div>
+
+              <div class="social-links mt-5">
+                <a href="https://www.linkedin.com/in/adeline-tuyizere-315b22294/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/adeline333" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            
+            <div class="contact-info-card mt-4">
+                <h4 style="font-size:1.1rem;margin-bottom:15px;color:var(--text-secondary)"><i class="fas fa-globe"></i> Languages</h4>
+                <div class="d-flex justify-content-between border-bottom border-secondary mb-2 pb-1">
+                    <span class="text-white">English</span><span class="text-primary">Professional</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom border-secondary mb-2 pb-1">
+                    <span class="text-white">French</span><span class="text-primary">Conversational</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="text-white">Kinyarwanda</span><span class="text-primary">Native</span>
+                </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- end info section -->
+    </section>
+  </main>
 
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
+  <!-- Footer -->
+  <footer class="footer_section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-7 col-md-9 mx-auto">
-          <p>
-            &copy; 2025 All Rights Reserved @ Adeline Tuyizere | Software Developer
-          </p>
-        </div>
-      </div>
-    </footer>
-  <!-- end footer section -->
+      <p>&copy; 2026 All Rights Reserved | Adeline Tuyizere</p>
+    </div>
+  </footer>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <!-- Scripts -->
   <script src="js/modern-effects.js"></script>
-
 </body>
-
-
 </html>
