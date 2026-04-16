@@ -376,8 +376,8 @@ h1, h2, h3, h4 {
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.9rem, 5.3vw, 4.9rem);
-  max-width: 10.5ch;
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  max-width: 12ch;
   margin-bottom: 20px;
 }
 
@@ -579,7 +579,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 1280px) {
   .hero-copy h1 {
-    font-size: clamp(2.8rem, 5vw, 4.4rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   }
 
   .hero-metrics {
@@ -603,7 +603,7 @@ h1, h2, h3, h4 {
 }
 
 .section-heading h2 {
-  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
   margin-bottom: 18px;
 }
 
@@ -632,7 +632,7 @@ h1, h2, h3, h4 {
 .skill-panel h3,
 .project-card h3,
 .contact-copy h2 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   margin-bottom: 16px;
 }
 
@@ -757,6 +757,28 @@ h1, h2, h3, h4 {
   flex-direction: column;
   gap: 16px;
   min-height: 100%;
+  overflow: hidden;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-soft);
+  margin-bottom: 8px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .project-card-featured {
@@ -981,7 +1003,7 @@ body.theme-light .footer_section p {
 }
 
 .sub_page .heading_container h2 {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
   margin-bottom: 12px;
 }
 

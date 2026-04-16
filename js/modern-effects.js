@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initActiveNavState();
   initHeaderState();
+  initContactForm();
 });
 
 function initLanguageSwitcher() {
@@ -23,7 +24,7 @@ function initLanguageSwitcher() {
       'nav.projects': 'Projects',
       'nav.contact': 'Contact',
       'hero.eyebrow': 'Full-Stack Software Engineer',
-      'hero.title': 'Building clean, resilient products with backend depth and a sharp frontend eye.',
+      'hero.title': 'Building reliable full-stack applications with modern technologies.',
       'hero.lead': "I'm Adeline Tuyizere. I build full-stack web applications with React, TypeScript, NestJS, Spring Boot, and PostgreSQL, with strong focus on backend logic, API integration, database design, and maintainable product delivery.",
       'hero.ctaPrimary': 'See Projects',
       'hero.ctaSecondary': "Let's Work Together",
@@ -35,7 +36,7 @@ function initLanguageSwitcher() {
       'hero.note2Label': 'Based In',
       'hero.note2Text': 'Kigali, Rwanda',
       'about.kicker': 'About',
-      'about.title': 'Engineering with structure, clarity, and momentum.',
+      'about.title': 'Professional Background',
       'about.lead': 'My work sits at the intersection of thoughtful product implementation and solid backend engineering. I enjoy building systems that are reliable under the hood while still feeling polished and intuitive to use.',
       'about.card1Title': 'Who I Am',
       'about.card1Text': 'I am a detail-oriented software engineer with hands-on experience building full-stack applications in collaborative environments. I care about code quality, clean architecture, and shipping features that solve real workflow problems.',
@@ -44,7 +45,7 @@ function initLanguageSwitcher() {
       'about.card3Title': "What I'm After",
       'about.card3Text': "I'm looking for engineering roles where strong fundamentals, product thinking, and steady execution matter. Teams that value ownership, rigor, and growth are where I do my best work.",
       'skills.kicker': 'Stack',
-      'skills.title': 'The tools I rely on to ship complete products.',
+      'skills.title': 'Technical Skills',
       'skills.lead': "I'm strongest when I can work across the full product surface, from backend logic and API contracts to responsive interfaces and deployment-ready workflows.",
       'skills.frontendTitle': 'Frontend',
       'skills.frontendText': 'Interfaces that are responsive, usable, and structured for real product flows.',
@@ -53,7 +54,7 @@ function initLanguageSwitcher() {
       'skills.dataTitle': 'Data and Delivery',
       'skills.dataText': 'Solid data modeling, developer tooling, and disciplined team workflows.',
       'projects.kicker': 'Projects',
-      'projects.title': 'Selected builds that show how I think and execute.',
+      'projects.title': 'Featured Projects',
       'projects.lead': 'These projects reflect a mix of dashboard work, platform features, systems design, and full-stack implementation across different product contexts.',
       'projects.project1Type': 'Operations Dashboard',
       'projects.project1Title': 'Mining Production Monitoring System',
@@ -73,13 +74,18 @@ function initLanguageSwitcher() {
       'common.github': 'GitHub',
       'common.liveSite': 'Live Site',
       'contact.kicker': 'Contact',
-      'contact.title': "Let's build something useful and well engineered.",
+      'contact.title': "Get In Touch",
       'contact.lead': "If you're hiring, collaborating, or looking for someone who can contribute across the stack, reach out. I'm especially interested in teams building serious products with strong engineering standards.",
       'contact.formName': 'Your name',
       'contact.formEmail': 'Your email',
       'contact.formSubject': 'Subject',
       'contact.formMessage': 'Your message',
       'contact.formSubmit': 'Send Message',
+      'contact.formSending': 'Sending...',
+      'contact.formProcessing': 'Processing...',
+      'contact.formSuccess': 'Thank you! Your message has been sent successfully.',
+      'contact.formError': 'Oops! There was a problem submitting your form.',
+      'contact.formConnectionError': 'Oops! There was a problem connecting to the server.',
       'footer.copy': '© 2026 Adeline Tuyizere. Built as a focused software engineering portfolio.',
       'footer.top': 'Back to top',
       pageTitle: 'Adeline Tuyizere | Software Engineer'
@@ -91,7 +97,7 @@ function initLanguageSwitcher() {
       'nav.projects': 'Imishinga',
       'nav.contact': 'Twandikire',
       'hero.eyebrow': 'Inzobere mu Guteza Imbere Imbuga n\'Inyuma',
-      'hero.title': 'Kubaka ibisubizo bisobanutse kandi bikomeye, bifite ubujyakuzimu mu backend n\'ubuhanga bwiza bwa frontend.',
+      'hero.title': 'Kubaka porogaramu zikomeye hifashishijwe ikoranabuhanga rigezweho.',
       'hero.lead': 'Nitwa Adeline Tuyizere. Nkubaka full-stack web applications nkoresheje React, TypeScript, NestJS, Spring Boot, na PostgreSQL, nshyira imbere backend logic, API integration, database design, no gutanga products zoroshye kubungabunga.',
       'hero.ctaPrimary': 'Reba Imishinga',
       'hero.ctaSecondary': 'Dukorane',
@@ -103,7 +109,7 @@ function initLanguageSwitcher() {
       'hero.note2Label': 'Mbarizwa',
       'hero.note2Text': 'Kigali, Rwanda',
       'about.kicker': 'Ibyanjye',
-      'about.title': 'Engineering ifite imiterere, ibisobanuro, n\'umuvuduko.',
+      'about.title': 'Amateka yanjye mu mwuga',
       'about.lead': 'Akazi kanjye kari hagati yo kubaka products zatekerejwe neza n\'ubwubatsi bukomeye bwa backend. Nkunda kubaka systems zikomeye imbere ariko zikanorohera abazikoresha.',
       'about.card1Title': 'Ndi nde',
       'about.card1Text': 'Ndi software engineer ukora yitonze kandi ufite uburambe mu kubaka full-stack applications mu matsinda. Nitaho code quality, architecture isukuye, no gutanga ibisubizo bikemura ibibazo nyabyo.',
@@ -112,7 +118,7 @@ function initLanguageSwitcher() {
       'about.card3Title': 'Icyo Nshaka',
       'about.card3Text': 'Nshaka roles za engineering aho fundamentals zikomeye, gutekereza nka product, n\'ishyirwa mu bikorwa rihamye bihabwa agaciro. Nkora neza mu matsinda akunda ownership, rigor, no gukura.',
       'skills.kicker': 'Ikoranabuhanga',
-      'skills.title': 'Ibikoresho nkoresha mu kugeza products ku rwego rwuzuye.',
+      'skills.title': 'Ubumenyi mu bya Tekiniki',
       'skills.lead': 'Nkora neza iyo nshoboye gukora ku bice byose bya product, kuva kuri backend logic na API contracts kugeza ku interfaces zihuza neza no ku workflows ziteguye deployment.',
       'skills.frontendTitle': 'Frontend',
       'skills.frontendText': 'Interfaces zisubiza neza, zoroshye gukoresha, kandi zubatse ku buryo bukwiriye real product flows.',
@@ -121,7 +127,7 @@ function initLanguageSwitcher() {
       'skills.dataTitle': 'Data na Delivery',
       'skills.dataText': 'Data modeling ikomeye, developer tooling, na team workflows zifite discipline.',
       'projects.kicker': 'Imishinga',
-      'projects.title': 'Imishinga yatoranyijwe yerekana uko ntekereza kandi nshyira mu bikorwa.',
+      'projects.title': 'Imishinga yatoranyijwe',
       'projects.lead': 'Iyi mishinga igaragaza dashboard work, platform features, systems design, na full-stack implementation mu bihe bitandukanye bya products.',
       'projects.project1Type': 'Dashboard y\'Ibikorwa',
       'projects.project1Title': 'Mining Production Monitoring System',
@@ -141,13 +147,18 @@ function initLanguageSwitcher() {
       'common.github': 'GitHub',
       'common.liveSite': 'Urubuga Ruriho',
       'contact.kicker': 'Twandikire',
-      'contact.title': 'Reka twubake ikintu gifite akamaro kandi cyubatswe neza.',
+      'contact.title': 'Tuvugane',
       'contact.lead': 'Niba uri gushaka umuntu wo guha akazi, gukorana na we, cyangwa ushaka uwatanga umusanzu mu bice byose bya stack, nyandikira. Nkunda cyane teams zubaka products zikomeye kandi zifite engineering standards nziza.',
       'contact.formName': 'Amazina yawe',
       'contact.formEmail': 'Email yawe',
       'contact.formSubject': 'Impamvu',
       'contact.formMessage': 'Ubutumwa bwawe',
       'contact.formSubmit': 'Ohereza Ubutumwa',
+      'contact.formSending': 'Biri koherezwa...',
+      'contact.formProcessing': 'Biri gutunganywa...',
+      'contact.formSuccess': 'Murakoze! Ubutumwa bwanyu bwoherejwe neza.',
+      'contact.formError': 'Habaye ikibazo mu kohereza ubutumwa bwanyu.',
+      'contact.formConnectionError': 'Habaye ikibazo mu guhuza na server.',
       'footer.copy': '© 2026 Adeline Tuyizere. Urubuga rwubatswe nk\'portfolio ya software engineering ifite icyerekezo.',
       'footer.top': 'Subira hejuru',
       pageTitle: 'Adeline Tuyizere | Software Engineer'
@@ -159,8 +170,8 @@ function initLanguageSwitcher() {
       'nav.projects': 'Projets',
       'nav.contact': 'Contact',
       'hero.eyebrow': 'Ingénieure Logicielle Full-Stack',
-      'hero.title': 'Créer des produits propres et robustes, avec une vraie profondeur backend et un frontend soigné.',
-      'hero.lead': "Je suis Adeline Tuyizere. Je construis des applications web full-stack avec React, TypeScript, NestJS, Spring Boot et PostgreSQL, avec un fort accent sur la logique backend, l'intégration d'API, la conception de bases de données et une livraison maintenable.",
+      'hero.title': 'Construire des applications full-stack fiables avec des technologies modernes.',
+      'hero.lead': "Je suis Adeline Tuyizere. Je construis des applications web full-stack avec React, TypeScript, NestJS, Spring Boot et PostgreSQL, with un fort accent sur la logique backend, l'intégration d'API, la conception de bases de données et une livraison maintenable.",
       'hero.ctaPrimary': 'Voir les Projets',
       'hero.ctaSecondary': 'Travaillons Ensemble',
       'hero.metric1': 'Projets réalisés sur des produits, dashboards et plateformes.',
@@ -171,7 +182,7 @@ function initLanguageSwitcher() {
       'hero.note2Label': 'Basée à',
       'hero.note2Text': 'Kigali, Rwanda',
       'about.kicker': 'À propos',
-      'about.title': 'Une ingénierie avec structure, clarté et élan.',
+      'about.title': 'Parcours Professionnel',
       'about.lead': "Mon travail se situe à l'intersection d'une mise en œuvre produit réfléchie et d'une solide ingénierie backend. J'aime construire des systèmes fiables en profondeur tout en restant polis et intuitifs à utiliser.",
       'about.card1Title': 'Qui je suis',
       'about.card1Text': "Je suis une ingénieure logicielle rigoureuse avec une expérience concrète dans la création d'applications full-stack en environnement collaboratif. J'accorde de l'importance à la qualité du code, à une architecture propre et à des fonctionnalités qui résolvent de vrais problèmes.",
@@ -180,7 +191,7 @@ function initLanguageSwitcher() {
       'about.card3Title': 'Ce que je recherche',
       'about.card3Text': "Je recherche des rôles d'ingénierie où les bases solides, la réflexion produit et une exécution régulière comptent. Je donne le meilleur de moi-même dans des équipes qui valorisent l'ownership, la rigueur et la progression.",
       'skills.kicker': 'Stack',
-      'skills.title': "Les outils sur lesquels je m'appuie pour livrer des produits complets.",
+      'skills.title': 'Compétences Techniques',
       'skills.lead': "Je suis la plus efficace lorsque je peux intervenir sur toute la surface d'un produit, de la logique backend et des contrats d'API jusqu'aux interfaces responsives et aux workflows prêts pour le déploiement.",
       'skills.frontendTitle': 'Frontend',
       'skills.frontendText': 'Des interfaces responsives, utilisables et structurées pour de vrais parcours produit.',
@@ -189,11 +200,11 @@ function initLanguageSwitcher() {
       'skills.dataTitle': 'Données et Delivery',
       'skills.dataText': 'Modélisation de données solide, outillage développeur et workflows disciplinés.',
       'projects.kicker': 'Projets',
-      'projects.title': 'Une sélection de réalisations qui montre ma manière de penser et d’exécuter.',
+      'projects.title': 'Projets Sélectionnés',
       'projects.lead': 'Ces projets reflètent un mélange de dashboards, de fonctionnalités de plateforme, de conception de systèmes et de full-stack implementation dans différents contextes produit.',
       'projects.project1Type': 'Dashboard Opérationnel',
       'projects.project1Title': 'Mining Production Monitoring System',
-      'projects.project1Text': "J'ai construit un dashboard de suivi de production pour les opérations minières avec des vues de reporting, une gestion des rôles et des workflows pilotés par la donnée pour améliorer la visibilité opérationnelle.",
+      'projects.project1Text': "J'ai construit un dashboard de suivi de production pour les opérations minières with des vues de reporting, une gestion des rôles et des workflows pilotés par la donnée pour améliorer la visibilité opérationnelle.",
       'projects.project2Type': 'Construction de Plateforme',
       'projects.project2Title': 'Peer-to-Peer Car Sharing',
       'projects.project2Text': "Développement de fonctionnalités de prêt et de réservation de véhicules en combinant des interfaces React avec des APIs NestJS et une logique de réservation appuyée sur PostgreSQL.",
@@ -209,13 +220,18 @@ function initLanguageSwitcher() {
       'common.github': 'GitHub',
       'common.liveSite': 'Site Live',
       'contact.kicker': 'Contact',
-      'contact.title': 'Construisons quelque chose d’utile et bien conçu.',
+      'contact.title': 'Me Contacter',
       'contact.lead': "Si vous recrutez, collaborez ou recherchez une personne capable de contribuer sur toute la stack, contactez-moi. Je suis particulièrement intéressée par les équipes qui construisent des produits sérieux avec de fortes exigences d'ingénierie.",
       'contact.formName': 'Votre nom',
       'contact.formEmail': 'Votre email',
       'contact.formSubject': 'Sujet',
       'contact.formMessage': 'Votre message',
       'contact.formSubmit': 'Envoyer le Message',
+      'contact.formSending': 'Envoi en cours...',
+      'contact.formProcessing': 'Traitement en cours...',
+      'contact.formSuccess': 'Merci ! Votre message a été envoyé avec succès.',
+      'contact.formError': 'Oups ! Un problème est survenu lors de l’envoi du formulaire.',
+      'contact.formConnectionError': 'Oups ! Un problème est survenu lors de la connexion au serveur.',
       'footer.copy': '© 2026 Adeline Tuyizere. Portfolio construit avec une approche logicielle rigoureuse.',
       'footer.top': 'Retour en haut',
       pageTitle: 'Adeline Tuyizere | Ingénieure Logicielle'
@@ -456,4 +472,85 @@ function initHeaderState() {
 
   syncHeaderState();
   window.addEventListener('scroll', syncHeaderState, { passive: true });
+}
+
+function initContactForm() {
+  const forms = document.querySelectorAll('.contact-form');
+  if (!forms.length) return;
+
+  const getTranslation = (key) => {
+    const lang = window.localStorage.getItem('portfolio-language') || 'en';
+    const activeBtn = document.querySelector('.language-btn.is-active');
+    const currentLang = activeBtn ? activeBtn.dataset.lang : 'en';
+    
+    const defaults = {
+      en: { sending: 'Sending...', processing: 'Processing...', success: 'Thank you! Your message has been sent successfully.', error: 'Oops! There was a problem submitting your form.', connection: 'Oops! There was a problem connecting to the server.' },
+      rw: { sending: 'Biri koherezwa...', processing: 'Biri gutunganywa...', success: 'Murakoze! Ubutumwa bwanyu bwoherejwe neza.', error: 'Habaye ikibazo mu kohereza ubutumwa bwanyu.', connection: 'Habaye ikibazo mu guhuza na server.' },
+      fr: { sending: 'Envoi en cours...', processing: 'Traitement en cours...', success: 'Merci ! Votre message a été envoyé avec succès.', error: 'Oups ! Un problème est survenu lors de l’envoi du formulaire.', connection: 'Oups ! Un problème est survenu lors de la connexion au serveur.' }
+    };
+    
+    return defaults[currentLang][key] || defaults.en[key];
+  };
+
+  forms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      if (!form.action.includes('formspree.io')) return;
+
+      e.preventDefault();
+      const status = form.querySelector('#form-status');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.textContent : '';
+
+      if (status) {
+        status.textContent = getTranslation('sending');
+        status.className = 'form-status is-visible';
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = getTranslation('processing');
+      }
+
+      try {
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          if (status) {
+            status.textContent = getTranslation('success');
+            status.className = 'form-status is-visible is-success';
+          }
+          form.reset();
+        } else {
+          const result = await response.json();
+          if (status) {
+            status.textContent = result.errors ? result.errors.map(error => error.message).join(', ') : getTranslation('error');
+            status.className = 'form-status is-visible is-error';
+          }
+        }
+      } catch (error) {
+        if (status) {
+          status.textContent = getTranslation('connection');
+          status.className = 'form-status is-visible is-error';
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+        
+        if (status && status.classList.contains('is-success')) {
+          setTimeout(() => {
+            status.className = 'form-status';
+          }, 5000);
+        }
+      }
+    });
+  });
 }

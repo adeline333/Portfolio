@@ -1,0 +1,30 @@
+.form-status {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm, 12px);
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.form-status.is-visible {
+  display: block;
+}
+
+.form-status.is-success {
+  background: rgba(88, 215, 196, 0.12);
+  color: var(--highlight, #58d7c4);
+  border: 1px solid rgba(88, 215, 196, 0.25);
+}
+
+.form-status.is-error {
+  background: rgba(255, 122, 24, 0.12);
+  color: var(--accent, #ff7a18);
+  border: 1px solid rgba(255, 122, 24, 0.25);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
